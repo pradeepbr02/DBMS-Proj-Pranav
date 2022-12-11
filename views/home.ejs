@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dropdown Menu with Search Box | CodingNepal</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <form action="/" method="GET">
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">FarmLanders</a></div>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="#" class="desktop-link">Features</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Features</label>
+            <ul>
+              <li><a href="#">Drop Menu 1</a></li>
+              <li><a href="#">Drop Menu 2</a></li>
+              <li><a href="#">Drop Menu 3</a></li>
+              <li><a href="#">Drop Menu 4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-link">Services</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="#">Drop Menu 1</a></li>
+              <li><a href="#">Drop Menu 2</a></li>
+              <li><a href="#">Drop Menu 3</a></li>
+              <li>
+                <a href="#" class="desktop-link">More Items</a>
+                <input type="checkbox" id="show-items">
+                <label for="show-items">More Items</label>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Location to be Searched..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+
+  <div class="card">
+    <div class="image">
+       <img src="https://i.pinimg.com/originals/13/b8/8b/13b88b6259c5023c11c7fc1dd9ed8d0f.jpg">
+    </div>
+    <div class="title">
+     <h1>
+    Post 1</h1>
+    </div>
+    <div class="des">
+     <p>Mysuru</p>
+    <button>View</button>
+    </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+         <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/03/19234622/featured1-compressed.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Post 2</h1>
+      </div>
+      <div class="des">
+       <p>Bengaluru</p>
+      <button>View</button>
+      </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+           <img src="https://img.staticmb.com/mbcontent//images/uploads/2021/10/tractor-spraying-pesticides-on-soybean-field.jpg">
+        </div>
+        <div class="title">
+         <h1>
+        Post 3</h1>
+        </div>
+        <div class="des">
+         <p>Hassan</p>
+        <button>View</button>
+        </div>
+        </div>
+
+        <div class="card">
+          <div class="image">
+             <img src="https://dp5zphk8udxg9.cloudfront.net/wp-content/uploads/2017/09/shutterstock_469817870-e1506621206513.jpg">
+          </div>
+          <div class="title">
+           <h1>
+          Post 4</h1>
+          </div>
+          <div class="des">
+           <p>Shivamoga</p>
+          <button>View</button>
+          </div>
+          </div>
+          </form>
+
+</body>
+</html>
