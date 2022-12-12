@@ -53,7 +53,7 @@ app.post("/login" , (req , res)=>{
             if(foundUser){
                 bcrypt.compare(password , foundUser.password , (req , result)=>{
                     if(result===true){
-                        console.log("login succesfull");
+                        res.redirect("/")
                     }
 
                 })
@@ -68,15 +68,16 @@ app.post("/signup" , async (req , res)=>{
 
 let hashedpassword = await bcrypt.hash(req.body.pass ,9);
 
-login.findOne({userName : req.body.username} , (err , results)=>{
+login.findOne({email: req.body.email} , (err , results)=>{
+    
     console.log(results);
-    if(results.userName===req.body.username){
+    if(results){
         console.log("Already exists");
         
         res.redirect("/");
 
     }
-    else{
+    else if(!results){
         const userLogin = new login({
     
             fullName : req.body.fullname,
