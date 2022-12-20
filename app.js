@@ -19,8 +19,16 @@ const loginSchema = new mongoose.Schema({
 
 });
 
-const login = new mongoose.model("login" , loginSchema);
+const postSchema = new mongoose.Schema({
+    title:String ,
+    landSize : String ,
+    location : String ,
+    landPrice :String ,
+    landContact:Number
+});
 
+const login = new mongoose.model("login" , loginSchema);
+const post = new mongoose.model("post" , postSchema);
 const app = express();
 
 app.use(express.static("public"));
@@ -29,7 +37,23 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/' , (req , res)=>{
-    res.render("home")
+    post.find({} , ( err, foundUsers)=>{
+        if(err){
+            console.log(err);
+        }
+        if(!foundUsers){
+            console.log("No posts found");
+        }
+        else{
+            res.render("home" , {
+
+                array:foundUsers
+
+            })
+            console.log(foundUsers);
+        }
+    })
+    
 });
 
 app.get("/signup" , (req , res)=>{
@@ -100,11 +124,51 @@ login.findOne({email: req.body.email} , (err , results)=>{
     }
 })
    
+})
 
-  
-    
+app.get('/submit' , (req , res)=>{
+    res.render("submit");
+})
+
+app.post("/submit" , (req , res)=>{
+    const post1 = new post({
+        title : req.body.farm ,
+        landSize : req.body.landSize,
+        location : req.body.location,
+        landPrice : req.body.landPrice ,
+        landContact : req.body.contact
+    });
+
+    post1.save((err)=>{
+        if(!err){
+            res.redirect("/");
+            console.log("post added successfully");
+        }
+        else{
+            console.log(err);
+        }
+    })
+
+});
+
+app.get("/viewPost/:title" , (req , res)=>{
+    const title = req.params.title;
+  post.findOne({title : title} , (err , foundUser)=>{
+    res.render("viewPost" , {
+        array : foundUser
+
+    })
+  })
+});
+
+app.post('/land/booked' , (req , res)=>{
+    res.send('Booked');
+})
 
 
+
+app.get('/about' , (req , res)=>{
+    res.render("about");
 })
 
 app.listen(5000 , (re, res)=>{

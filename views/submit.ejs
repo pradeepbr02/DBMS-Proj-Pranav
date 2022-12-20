@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Submit</title>
+  <link rel="stylesheet" href="css/submit.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600"
+  rel="stylesheet"
+  type="text/css"
+/>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+</head>
+<body>
+    
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">FarmLanders</a></div>
+        <ul class="links">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li>
+            <a href="#" class="desktop-link">Contact</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Contact</label>
+            <ul>
+              <li><a href="#">Pranav</a></li>
+              <li><a href="#">Pramith</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="desktop-link">Submit Post</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Submit Post</label>
+          </li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      
+    </nav>
+  </div>
+   
+<form action="/submit" method="post">
+<div class="login-page">
+    <div class="form">
+        
+            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_sgn7zslb.json"  background="transparent"  speed="1"  style="justify-content: center;" loop  autoplay></lottie-player>
+            <input type="text" name="farm" placeholder="&#xf097;  Title"/>
+            <input type="text" name="landSize" id="land size" placeholder="&#xf067;  Land size"/>
+            <input type="text"  name="location" id="location" placeholder="&#xf067;  Location"/>
+            <input type="number" name="landPrice" id="price for lease per month" placeholder="&#xf067;  Price of lease per month "/>
+            <input type="text" name="contact" id="contact" placeholder="&#xf007;  Contact "/>
+            <!-- <input type="file" id="img" name="img" accept="image/*"> -->
+        
+  
+      
+        <button type="submit">POST</button>
+    
+    </div>
+    </div>
+    </form>
+    
+
+</body>
+</html>
