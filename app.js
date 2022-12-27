@@ -161,9 +161,11 @@ app.get("/viewPost/:title" , (req , res)=>{
   })
 });
 
-app.post('/land/booked' , (req , res)=>{
-    res.send('Booked');
+app.get("/view/book" , (req , res)=>{
+    res.render("booked");
 })
+
+
 
 
 

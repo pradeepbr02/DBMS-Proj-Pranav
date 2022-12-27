@@ -4,21 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>View</title>
-  <link rel="stylesheet" href="/css/viewPost.css">
+  <title>Booked Successfully</title>
+  <link rel="stylesheet" href="/css/booked.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-/>
-<link
-  href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600"
-  rel="stylesheet"
-  type="text/css"
-/>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -29,8 +18,8 @@
       <div class="content">
       <div class="logo"><a href="#">FarmLanders</a></div>
         <ul class="links">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li>
             <a href="#" class="desktop-link">Contact</a>
             <input type="checkbox" id="show-features">
@@ -54,25 +43,12 @@
       </form>
     </nav>
   </div>
-
-<form action="/land/booked" method="post">
-  <div class="view-post">
-    <div class="view-post_img">
-      <img src="https://img.staticmb.com/mbcontent//images/uploads/2021/10/tractor-spraying-pesticides-on-soybean-field.jpg">
-    </div>
-    <div class="view-post_info">
-      <h1 class="view-post_title">Name:<%= array.title %></h1>
-      <p class="view-post_text">Land Size:<%= array.landSize %> </p>
-      <p class="view-post_text">Location:<%= array.location %> </p>
-      <p class="view-post_text">Price: <%= array.landPrice %> </p>
-      <p class="view-post_text">Contact: <%= array.landContact %> </p>
-      <a href="/view/book" class="view-post_cta">Book</a>
-    </div>
-  </div>
-
-
    
-
-</form>
+  <div class="about-text">
+    <h2>Booked Successfully...</h2>
+  </div>
+  <div class="lotty">
+  <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_Yk0pxWYfo6.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
+  </div>
 </body>
 </html>
